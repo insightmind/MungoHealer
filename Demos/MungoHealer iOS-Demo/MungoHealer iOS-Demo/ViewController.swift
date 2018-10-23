@@ -14,19 +14,19 @@ struct MyLocalizedError: LocalizedError {
 
 struct MyBaseError: BaseError {
     let errorDescription = "This is a fake base error message for presenting to the user."
-    let source = ErrorSource.allCases.randomElement()!
+    let source = ErrorSource.invalidUserInput
 }
 
 struct MyFatalError: FatalError {
     let errorDescription = "This is a fake fatal error message for presenting to the user."
-    let source = ErrorSource.allCases.randomElement()!
+    let source = ErrorSource.internalInconsistency
 }
 
 struct MyHealableError: HealableError {
     private let retryClosure: () -> Void
 
     let errorDescription = "This is a fake healable error message for presenting to the user."
-    let source = ErrorSource.allCases.randomElement()!
+    let source = ErrorSource.custom(title: "This is a custom error source!")
 
     var healingOptions: [HealingOption] {
         let retryOption = HealingOption(style: .recommended, title: "Try Again", handler: retryClosure)

@@ -87,6 +87,9 @@ extension AlertLogErrorHandler: ErrorHandler {
 
         case .externalSystemBehavedUnexpectedly:
             return LocalizedString("\(keyPrefix).EXTERNAL_SYSTEM_BEHAVED_UNEXPECTEDLY")
+
+        case let .custom(title):
+            return title
         }
     }
 

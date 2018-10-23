@@ -6,9 +6,10 @@
 import Foundation
 
 /// A general classification between different sources for runtime errors.
-public enum ErrorSource: CaseIterable {
+public enum ErrorSource {
     case invalidUserInput
     case internalInconsistency
     case externalSystemUnavailable
     case externalSystemBehavedUnexpectedly
+    case custom(title: String)
 }
