@@ -80,6 +80,7 @@ A classification of the errors source. MungoHealer will automatically provide an
 -  `.internalInconsistency`
 -  `.externalSystemUnavailable`
 -  `.externalSystemBehavedUnexpectedlyBased`
+-  `.custom(title: String)`
 
 The options are explained in detail [here](https://khawerkhaliq.com/blog/swift-error-handling/#Sources_of_errors).
 
