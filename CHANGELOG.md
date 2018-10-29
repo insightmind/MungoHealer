@@ -4,9 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.3.0] - 2018-10-24
+### Added
+- Convenience `do` method on `MungoHealer` to simplify usage with single `handle(error)` catch-all.
+
+## [0.2.0] - 2018-10-24
 ### Added
 - Convenience implementations of error protocols: `MungoError`, `MungoFatalError` & `MungoHealableError`
-- A custom `ErrorSource` case.
+- A new `ErrorSource` case for providing a `custom` title to error communication.
+- A `debugDescription` as an addition to the `BaseError` protocol.
 
 ## [0.1.0] - 2018-10-16
 ### Added
